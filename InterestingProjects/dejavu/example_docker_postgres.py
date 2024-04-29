@@ -29,10 +29,11 @@ if __name__ == '__main__':
 
     for file in os.listdir(directory):
         f = os.path.join(directory, file)
-        #check if its an mp3 file
+        # Check if its an mp3 file
         if !(os.path.isfile(f) and (f.endswith('.mp3') or f.endswith('.wav'))):
             continue
-
+        
+        
     
     
 
