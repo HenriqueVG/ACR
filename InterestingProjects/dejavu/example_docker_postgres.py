@@ -27,11 +27,12 @@ if __name__ == '__main__':
     djv.fingerprint_directory(directory, [".wav"])
     
 
-    for file in os.listdir(directory):
-        f = os.path.join(directory, file)
+    # for file in os.listdir(directory):
+    #    f = os.path.join(directory, file)
         # Check if its an mp3 file
-        if !(os.path.isfile(f) and (f.endswith('.mp3') or f.endswith('.wav'))):
-            continue
+    #    if !(os.path.isfile(f) and (f.endswith('.mp3') or f.endswith('.wav'))):
+    #        continue
+
         
         
     
@@ -39,8 +40,8 @@ if __name__ == '__main__':
 
 
     # Recognize audio from a file
-    #results = djv.recognize(FileRecognizer, "mp3/Josh-Woodward--I-Want-To-Destroy-Something-Beautiful.mp3")
-    #print(f"From file we recognized: {results}\n")
+    results = djv.recognize(FileRecognizer, "mp3/Josh-Woodward--I-Want-To-Destroy-Something-Beautiful.mp3")
+    print(f"From file we recognized: {results}\n")
 
     # Or use a recognizer without the shortcut, in anyway you would like
     #recognizer = FileRecognizer(djv)

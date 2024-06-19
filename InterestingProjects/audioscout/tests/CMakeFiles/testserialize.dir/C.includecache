@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projects/audioscout/tests/testserialize.c
+stdlib.h
+-
+stdio.h
+-
+stdint.h
+-
+serialize.h
+/home/david/projects/audioscout/tests/serialize.h
+
+tests/../libs/serialize.h
+machine/endian.h
+-
+sys/param.h
+-
+endian.h
+-
+stdint.h
+-
+

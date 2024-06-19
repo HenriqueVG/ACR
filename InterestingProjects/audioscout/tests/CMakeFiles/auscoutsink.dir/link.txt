@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/auscoutsink.dir/auscout-sink.c.o  -o auscoutsink -rdynamic -L/home/david/projects/audioscout/tests/../libs -lzmq -lpthread -lrt -Wl,-rpath,/home/david/projects/audioscout/tests/../libs 

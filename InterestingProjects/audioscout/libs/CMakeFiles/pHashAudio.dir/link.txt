@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fPIC   -shared -Wl,-soname,libpHashAudio.so -o libpHashAudio.so CMakeFiles/pHashAudio.dir/phash_audio.c.o CMakeFiles/pHashAudio.dir/fft.c.o CMakeFiles/pHashAudio.dir/phcomplex.c.o -L/home/david/projects/audioscout/libs/table-4.3.0phmodified table-4.3.0phmodified/libtable.a -Wl,-rpath,/home/david/projects/audioscout/libs/table-4.3.0phmodified: 

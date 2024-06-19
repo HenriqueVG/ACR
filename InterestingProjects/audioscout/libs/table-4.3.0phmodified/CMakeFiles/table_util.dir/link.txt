@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/table_util.dir/table_util.c.o  -o table_util -rdynamic libtable.a 

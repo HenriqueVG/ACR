@@ -1,0 +1,55 @@
+Introduction
+============
+
+This is version 1.0 of the songprint library, a library for acoustic
+fingerprinting of music and queries using eTantrum's song identification 
+service. 
+
+We encourage your participation!  If you'd like to help out with
+development, visit http://freetantrum.org, or join our mailing list at
+http://lists.sourceforge.net/mailman/listinfo/freetantrum-devel.
+
+Requirements
+============
+
+The songprint library requires the following additional libraries:
+
+  - FFTW (http://www.fftw.org/)  
+  - glib (http://www.gtk.org/) 
+
+Installation
+============
+
+Configure and make should be sufficient for compiling songprint on
+your platform.  Check the INSTALL file for more details.  
+
+Codecs for the reference implementation can be disabled at configure
+time.  Run configure with --help for information on these options.
+
+Note on fftw: make sure you compile fftw with the shared object flag
+
+Win32 Build Specific Settings
+=============================
+
+You must modify the Project Settings for the sp_sdk_lib and sp_sdk_dll
+projects so that it can find the above required libraries and include
+files.  To do this, enter project settings, select the C/C++ tab, 
+select the Preprocessor Category, and enter the correct path to the
+glib and fftw header files in the "Additional include directories"
+edit box.  When trying to build the sp_sdk_dll library, you will need
+to also go to the Link tab, select the Input Category, and enter the
+correct path to the glib and fftw library files in the "Additional
+library path" edit box.  The same changes must be made to the Win32 GUI
+example program in order to get it to build properly.  
+
+License
+=======
+
+All source code in the library is copyright (C) 2000 eTantrum, Inc.
+Example code, with the exception of the OggVorbis library and 
+the mpg123 library, is also copyright (C) 2000 eTantrum, Inc.  
+This code is released under the GNU General Public License (GPL).  
+See the COPYING file for more details.
+
+
+

@@ -1,0 +1,14 @@
+libsongprint 1.1
+~~~~~~~~~~~~~~~~
+New in this release:
+
+* Added another install target: libsongprintfile.  This library
+exports the function sp_identify_file(), aimed at application
+developers who just want to ID mp3, vorbis, and wav files without the
+hassle of writing codec support functions.  libsongprint is still
+there for applications that supply a decoder.  The example program now
+uses libsongprintfile.
+ 
+* libsongprint now returns the eTantrum media ID and moreinfo URLs in
+the sp_id structure.
+

@@ -1,0 +1,9 @@
+/usr/local/lib/libpHashAudio.so
+/usr/local/lib/libAudioData.so
+/usr/local/include/phash_audio.h
+/usr/local/include/audiodata.h
+/usr/local/bin/audioindex
+/usr/local/bin/auscoutd
+/usr/local/bin/tblservd
+/usr/local/bin/metadatadb
+/usr/local/bin/auscoutclient

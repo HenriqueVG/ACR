@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/auscoutclient.dir/auscout-client.c.o  -o auscoutclient -rdynamic -L/home/david/projects/audioscout/clients/../libs ../libs/libAudioData.so ../libs/libpHashAudio.so -lzmq -lsndfile -lmpg123 -lsamplerate -lzmq ../libs/table-4.3.0phmodified/libtable.a -Wl,-rpath,/home/david/projects/audioscout/clients/../libs:/home/david/projects/audioscout/libs: 

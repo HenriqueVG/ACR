@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/metadatadb.dir/metadatadb.c.o  -o metadatadb -rdynamic -L/home/david/projects/audioscout/servers/../libs -lsqlite3 -lzmq -lpthread -Wl,-rpath,/home/david/projects/audioscout/servers/../libs: 

@@ -1,0 +1,29 @@
+Wed Nov 15 10:50:01 EDT 2000  sshinn <sshinn@etantrum.com>
+	* added in Ingo Saitz <Ingo.Saitz@stud.uni-hannover.de> patch
+        to use the mpg123 lib from lame
+
+Tue Sep 26 13:57:45 EDT 2000  robj  <robj@etantrum.com>
+
+	* updated net code to parse moreinfo data and media ID's
+	* changed net code to allow for non-text values
+
+Tue Sep 26 13:42:14 EDT 2000  raldi  <raldi@etantrum.com>
+
+	* moved codecs from example/ to src/
+	* changed example directory and sp_id_t to print out
+	a url to submit information for unknown songs
+
+Tue Sep 26 13:42:13 EDT 2000  jshiring  <slothy@etantrum.com>
+
+	* updated codec automake makefiles for new layout
+	* created songprintfile.[ch] for new songprintfile library
+	* updated automake makefiles for new songprintfile library
+	* added get/set/clear functions to sp_id_t.c for the moreinfo
+	  url and the media ID
+
+Tue Sep 26 13:30:00 EDT 2000  bcopeland  <bcopeland@etantrum.com>
+
+	* removed url_encode.[ch] from example directory as they are now in
+	libsongprintfile.
+	* modified automake makefiles to remove source files that aren't
+	used anymore.

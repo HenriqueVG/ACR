@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/TestAudioData.dir/test_audiodata.c.o  -o TestAudioData -rdynamic -L/home/david/projects/audioscout/tests/../libs ../libs/libAudioData.so -lzmq -lsndfile -lmpg123 -lsamplerate -lzmq -Wl,-rpath,/home/david/projects/audioscout/tests/../libs:/home/david/projects/audioscout/libs 

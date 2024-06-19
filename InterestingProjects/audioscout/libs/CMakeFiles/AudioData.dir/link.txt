@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fPIC   -shared -Wl,-soname,libAudioData.so -o libAudioData.so CMakeFiles/AudioData.dir/audiodata.c.o -L/home/david/projects/audioscout/libs/table-4.3.0phmodified -lsndfile -lmpg123 -lsamplerate -lzmq -Wl,-rpath,/home/david/projects/audioscout/libs/table-4.3.0phmodified: 

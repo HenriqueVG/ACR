@@ -1,0 +1,49 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:584: checking for a BSD compatible install
+configure:637: checking whether build environment is sane
+configure:694: checking whether make sets ${MAKE}
+configure:740: checking for working aclocal
+configure:753: checking for working autoconf
+configure:766: checking for working automake
+configure:779: checking for working autoheader
+configure:792: checking for working makeinfo
+configure:827: checking for gcc
+configure:940: checking whether the C compiler (gcc  ) works
+configure:956: gcc -o conftest    conftest.c  1>&5
+configure:953:1: warning: return type defaults to 'int' [-Wimplicit-int]
+  953 | main(){return(0);}
+      | ^~~~
+configure:982: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:987: checking whether we are using GNU C
+configure:1015: checking whether gcc accepts -g
+configure:1047: checking for POSIXized ISC
+configure:1070: checking for gcc
+configure:1183: checking whether the C compiler (gcc -g -O2 ) works
+configure:1199: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1196:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ 1196 | main(){return(0);}
+      | ^~~~
+configure:1225: checking whether the C compiler (gcc -g -O2 ) is a cross-compiler
+configure:1230: checking whether we are using GNU C
+configure:1258: checking whether gcc accepts -g
+configure:1293: checking for gcc option to accept ANSI C
+configure:1370: checking how to run the C preprocessor
+configure:1450: checking for ANSI C header files
+configure:1558: checking for signal.h
+configure:1558: checking for fcntl.h
+configure:1558: checking for sys/resource.h
+configure:1558: checking for sys/socket.h
+configure:1598: checking for netinet/in.h
+configure:1598: checking for netdb.h
+configure:1598: checking for errno.h
+configure:1637: checking for sigaction
+configure:1637: checking for signal
+configure:1766: checking host system type
+configure:1787: checking build system type
+configure:1807: checking for ranlib
+configure:1846: checking for ld used by GCC
+configure:1909: checking if the linker (/usr/bin/ld) is GNU ld
+configure:1925: checking for BSD-compatible nm
+configure:1962: checking whether ln -s works

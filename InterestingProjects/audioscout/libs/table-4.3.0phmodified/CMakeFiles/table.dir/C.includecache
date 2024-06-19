@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+fcntl.h
+-
+unistd.h
+-
+sys/mman.h
+-
+sys/stat.h
+-
+windows.h
+-
+sys/stat.h
+-
+io.h
+-
+malloc.h
+-
+table.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table.h
+table_loc.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_loc.h
+dmalloc.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/dmalloc.h
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table.h
+table_loc.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_loc.h
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_loc.h
+

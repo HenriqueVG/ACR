@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table.h
+table_loc.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_loc.h
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_loc.h
+
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table_t.c
+stdio.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+time.h
+-
+unistd.h
+-
+windows.h
+-
+table.h
+/home/david/projects/audioscout/libs/table-4.3.0phmodified/table.h
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projects/audioscout/tests/test_audiodata.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+assert.h
+-
+audiodata.h
+/home/david/projects/audioscout/tests/audiodata.h
+
+tests/../libs/audiodata.h
+stdint.h
+-
+pHashAudioConfig.h
+tests/../libs/pHashAudioConfig.h
+
+tests/../libs/pHashAudioConfig.h
+

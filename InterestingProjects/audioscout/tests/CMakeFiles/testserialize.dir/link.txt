@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/testserialize.dir/testserialize.c.o  -o testserialize -rdynamic -L/home/david/projects/audioscout/tests/../libs 

@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/tblservd.dir/table_server.c.o  -o tblservd -rdynamic -L/home/david/projects/audioscout/servers/../libs ../libs/libpHashAudio.so -lzmq -lpthread ../libs/table-4.3.0phmodified/libtable.a -Wl,-rpath,/home/david/projects/audioscout/servers/../libs:/home/david/projects/audioscout/libs: 

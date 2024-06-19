@@ -3,10 +3,10 @@ require 'tempfile'
 require 'tmpdir'
 
 ALLOWED_AUDIO_FILE_EXTENSIONS = "**/*.{m4a,wav,mp4,wv,ape,ogg,mp3,flac,wma,M4A,WAV,MP4,WV,APE,OGG,MP3,FLAC,WMA}"
-AUDIO_FILES_TO_CHECK_FOR_TRUE_POSITIVES = 100
-AUDIO_FILES_TO_CHECK_FOR_FALSE_POSITIVES = 100
-AUDIO_FILES_OTHERS = 100
-QUERY_LENGTHS = [10]
+AUDIO_FILES_TO_CHECK_FOR_TRUE_POSITIVES = 600
+AUDIO_FILES_TO_CHECK_FOR_FALSE_POSITIVES = 600
+AUDIO_FILES_OTHERS = 600
+QUERY_LENGTHS = [10,5,2]
 RANDOM_SEED = 1
 
 #Make the test deterministic on the seed
@@ -121,7 +121,7 @@ end
 def audio_file_list(arg,files_to_process)
   arg = File.expand_path(arg)
   if File.directory?(arg)
-    audio_files_in_dir = Dir.glob(File.join(arg,ALLOWED_AUDIO_FILE_EXTENSIONS))
+    audio_files_in_dir = Dir.glob(File.join(arg,ALLOWED_AUDIO_FILE_EXTENSIONS)).sort.take(1800)
     audio_files_in_dir.each do |audio_filename|
       files_to_process << audio_filename
     end
@@ -152,7 +152,7 @@ end
 
 input_files = Array.new
 audio_file_list(directory,input_files)
-input_files = input_files.shuffle
+#input_files = input_files.shuffle
 
 audio_files_needed = AUDIO_FILES_TO_CHECK_FOR_TRUE_POSITIVES + AUDIO_FILES_TO_CHECK_FOR_TRUE_POSITIVES + AUDIO_FILES_OTHERS
 puts "Total audio files available: #{input_files.size}, evaluation needs #{audio_files_needed}"
@@ -221,14 +221,16 @@ class Match
 end
 
 def print_olaf_query_result(query_file,modification,parameter,ref_file_start,matches,tp_or_tn_expected)
-  lines = `olaf query #{query_file} 2>/dev/null`.split("\n")
+ lines = `olaf query #{query_file} 2>/dev/null`.split("\n")
 
   lines.shift #remove header
   line = lines.first
 
   #match count (#), q start (s) , q stop (s), ref path, ref ID, ref start (s), ref stop (s)
   #store only first match
-  indx,count,query_file,score ,query_start,query_stop,ref_path,ref_id,ref_start,ref_stop = line.split(",").map(&:strip)
+  indx,count,query_file,score1, score2,query_start,query_stop,ref_path,ref_id,ref_start,ref_stop = line.split(",").map(&:strip)
+  score = (score1 + "." + score2)
+
   m = Match.new
 
   m.score = score.to_i
@@ -239,14 +241,23 @@ def print_olaf_query_result(query_file,modification,parameter,ref_file_start,mat
   m.time_diff = ref_start.to_f - query_start.to_f
   m.match_expected = ("tp"==tp_or_tn_expected)
   m.query_file = query_file
+  query_duration = query_stop.to_i - query_start.to_i
+  ref_name = File.basename(ref_path, ".mp3")
+  success = "False"
+  if query_file.include?ref_name
+  	success = "True"
+  end
 
   puts "line: #{line} "
+  File.write("output.txt","line: #{line} \n", mode: "a")
   puts "match: #{m.file_names_match?} #{m.query_file} #{m.result_file_name}"
-
+  File.write("output.txt","match: #{m.file_names_match?} #{m.query_file} #{m.result_file_name} \n", mode: "a")
   matches << m
 
   #print each result
   lines.each do |line|
+    File.write("output.txt","#{line},#{modification},#{parameter},#{ref_file_start},#{("tp"==tp_or_tn_expected)} \n", mode: "a")
+    File.write("output_simple.txt","#{score},#{query_file},#{modification},#{parameter},#{query_duration},#{ref_id},#{ref_path},#{ref_name},#{("tp"==tp_or_tn_expected)},#{success}\n" , mode:"a")
     puts "#{line},#{modification},#{parameter},#{ref_file_start},#{("tp"==tp_or_tn_expected)}"
   end
 end
